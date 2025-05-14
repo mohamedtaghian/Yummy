@@ -1,0 +1,185 @@
+/* Start Global Rules */
+body {
+  background-color: #0d0d0d;
+}
+a,
+button {
+  color: inherit;
+}
+section {
+  margin-left: 4.375rem;
+  padding-block: 20px;
+}
+/* End Global Rules */
+
+/* Start Header  */
+header {
+  transform: translateX(-302px);
+  transition: transform 1s;
+}
+.open {
+  transform: translateX(0);
+}
+header .logo {
+  width: 3.125rem;
+}
+nav {
+  background-color: #0d0d0d;
+}
+nav .nav-btns {
+  overflow: hidden;
+}
+.nav-item {
+  padding: 0.5rem 0;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+
+  position: relative;
+  top: 300px;
+  transition: top 1s ease;
+}
+.slide-up {
+  top: 0;
+}
+/* End Header  */
+
+/* Start Main  */
+.meal-item:hover {
+  cursor: pointer;
+}
+.meal-item .overaly {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  inset: 0;
+
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+.meal-item:hover .overaly {
+  transform: translateY(0);
+}
+/* End Main  */
+
+/* Start Meal-details */
+.meal-details .btn--close {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.875rem;
+  color: #bbb;
+  transition: color 0.3s;
+}
+.meal-details .btn--close:hover {
+  color: white;
+}
+/* End Meal-details */
+
+/* Start Search */
+.search input::placeholder {
+  color: #bbb;
+}
+.search input:focus {
+  caret-color: white;
+  color: white;
+}
+.search input {
+  color: white;
+}
+/* End Search */
+
+/* Start Category */
+.meal-category {
+  cursor: pointer;
+}
+.meals-category .category-overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  inset: 0;
+
+  transform: translateY(200%);
+  transition: transform 0.5s;
+}
+.meal-category:hover .category-overlay {
+  transform: translateY(0);
+}
+/* End Category */
+
+/* Start Area */
+.area-card {
+  cursor: pointer;
+}
+/* End Area */
+
+/* Start Ingredients */
+.ingredient-card {
+  cursor: pointer;
+}
+.ingredient-description {
+  height: 100px;
+}
+/* End Ingredients */
+
+/* Start Contact */
+.contact {
+  height: calc(100vh - 2.5rem);
+}
+/* End Contact */
+
+/* Start Spinner */
+.spinner {
+  position: fixed;
+  inset: 0;
+  background-color: #0d0d0d;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  color: #fff;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em,
+      0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em,
+      0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+/* End Spinner */
